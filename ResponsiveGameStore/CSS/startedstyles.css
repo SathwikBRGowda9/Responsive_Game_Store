@@ -1,0 +1,347 @@
+/*! * Bootstrap v4.1.0 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-2018 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */
+
+/* STYLES BEGINS */
+
+/* 1. Basic */
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.content-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.content-section-heading h2 {
+  font-size: 48px;
+}
+
+.content-section-heading h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  font-weight: 700;
+  font: 700 2rem/2.5rem "Montserrat", sans-serif;
+  text-shadow: 2px grey;
+  text-align: center;
+}
+
+h5 {
+  font-size: 18px;
+  font: 100 1rem/1.5rem "Montserrat", sans-serif;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.block-heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+
+/* Navigation Bar Styles */
+/* Logo Container */
+.logo {
+  position: absolute;
+  z-index: 99;
+  left: 50px;
+  top: 20px;
+  max-width: 50%;
+  max-height: 50%;
+  background-size: cover;
+  padding: 10px;
+  /* Adjust padding */
+  border-radius: 8px;
+  /* Rounded edges */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo Image */
+.logo img {
+  width: 4.0625rem;
+  height: 4.0625rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: transparent;
+  border: none;
+}
+
+/* Hover Effect: Lift & Glow */
+.logo:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  
+
+}
+
+.btn {
+  width: 80%;
+  max-width: 300px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  color:white;
+  background-color:transparent;
+  box-shadow: 0 5px 10px black ;
+}
+
+.btn-info {
+  align-items: center;
+  text-align: center;
+}
+
+.menu-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 50px;
+  z-index: 999;
+}
+
+.menu-toggle:focus,
+.menu-toggle:hover {
+  color: #fff;
+}
+
+.menu-toggle:hover {
+  background: #343a40;
+}
+
+
+/* 3. Header */
+#Banner h1 {
+  text-shadow: 3px 0px 0px black;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+h1 {
+  font-size: 3rem;
+  margin: 0.5em 0;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the whole background */
+  z-index: -1; /* Ensures the video stays behind content */
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+
+#Banner {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-image:url('images/background.png');
+  background-position: center;
+  color: #fff;
+  box-shadow: 0px 10px #b2b2b2;
+}
+
+#Banner .content-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+#Banner .content-wrap h1 {
+  font-size: 3rem;
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+#Banner .content-wrap h3 {
+  font-size: 1.5rem;
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+#Banner .btn-info {
+  background-color: hsl(318, 80%, 46%);
+  color: #fff;
+  border: none;
+}
+
+#Banner .btn-info:hover {
+  background-color: #07bcab;
+}
+
+/* Footer Styles */
+footer.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #dcdee0;
+  text-align: center; /* Center-align all content */
+}
+
+footer.footer .list-inline {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove bullet points */
+}
+
+footer.footer .list-inline-item {
+  margin: 0 15px; /* Add spacing between icons */
+}
+
+footer.footer .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  background-color: rgb(224, 48, 63);
+  color: hsl(0, 16%, 85%);
+  border: none;
+  border-radius: 50%; /* Make the icons circular */
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+footer.footer .social-link:hover {
+  background-color: hsl(293, 77%, 51%);
+  transform: scale(1.1); /* Add a slight zoom effect on hover */
+}
+
+footer.footer p.small {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #636c72;
+}
+
+footer.footer p.small a {
+  color: #636c72;
+  text-decoration: none;
+}
+
+footer.footer p.small a:hover,
+footer.footer p.small a.focus {
+  color: #02ccba;
+  text-decoration: none;
+}
+
+#Contact .address-block span {
+  text-transform: none;
+}
+
+/* 5. Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .logo {
+    left: 10px;
+    top: 10px;
+  }
+
+  .logo img {
+    width: 5rem;
+    height: 1.5rem;
+  }
+
+  #Banner .content-wrap h1 {
+    font-size: 2.5rem;
+  }
+
+  #Banner .content-wrap h3 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    left: 5px;
+    top: 5px;
+  }
+
+  .logo img {
+    width: 4rem;
+    height: 1.2rem;
+  }
+
+  #Banner .content-wrap h1 {
+    font-size: 2rem;
+  }
+
+  #Banner .content-wrap h3 {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  footer.footer .social-link {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    padding: 8px;
+  }
+}

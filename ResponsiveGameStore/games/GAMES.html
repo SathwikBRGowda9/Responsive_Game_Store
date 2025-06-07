@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Gaming Website">
+  <meta name="author" content="">
+
+  <title>GameSpace</title>
+      <!-- Font Awesome Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+      
+  <link rel="stylesheet" href="CSS/gamesstyle.css">
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation Bar -->
+  <div class="logo">
+    <a class="navbar-brand logo-image" href="index.html">
+    <img src="images/logo.jpg"" alt="">
+    </a>
+  </div>
+  <a class="menu-toggle rounded" href="index.html">
+    <i class="fa fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="smooth-scroll" href="#Header"></a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a href="gamelib.html">Games Library</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a href="login.html">Login</a>
+      </li>
+    </ul>
+  </nav>
+
+
+
+  <!--HEADER SECTION-->
+  <section id="Banner" class="content-section">
+    <div class="container content-wrap text-center">
+      <div class="container-h1">
+        <h1 class="playhead"> PLAY! </h1> <br>
+
+
+
+        <!-- AUTO SCROLL- clicking "Play" will take you to the game section where you can see games also for clicking search icon-->
+        <script>
+
+          $(".playhead").click(function () {
+            var offset = 20; //Offset of 20px
+
+            $('html, body').animate({
+              scrollTop: $("#games-section").offset().top + offset
+            }, 2000);
+          })
+        </script>
+
+        <script>
+          $(document).ready(function () {
+            $("#searchicon").click(function () {
+              var offset = 20; //Offset of 20px
+
+              $('html, body').animate({
+                scrollTop: $("#games-section").offset().top + offset
+              }, 1000);
+            });
+          });
+        </script>
+        <!--End of auto scroll script-->
+        <div class="row justify-content-center">
+          <h5> <em>In order to play more games login now.</em> </h5>
+        </div>
+      </div>
+      <!-- From Uiverse.io by OnlyCodeChannel -->
+      <div class="searchBox">
+
+        <input class="searchInput" type="text" name="" placeholder="Search something">
+        <button class="searchButton" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+            <g clip-path="url(#clip0_2_17)">
+              <g filter="url(#filter0_d_2_17)">
+                <path
+                  d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z"
+                  stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                  shape-rendering="crispEdges"></path>
+              </g>
+            </g>
+            <defs>
+              <filter id="filter0_d_2_17" x="-0.418549" y="3.70435" width="29.7139" height="29.7139"
+                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"></feColorMatrix>
+                <feOffset dy="4"></feOffset>
+                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_17"></feBlend>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_17" result="shape"></feBlend>
+              </filter>
+              <clipPath id="clip0_2_17">
+                <rect width="28.0702" height="28.0702" fill="white" transform="translate(0.403503 0.526367)"></rect>
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+      </div>
+
+
+      <!--To prevent the page from reloading when we click enter in the search input box-->
+      <script>
+        $('#searchbar').keypress(function (e) {
+          if (e.which == 13) {
+            e.preventDefault();
+          }
+        });
+      </script>
+      <div div class="container-fluid d-flex justify-content-center px-5">
+        <div class="row">
+
+          <div class="col col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                2D
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                Action
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                Adventure
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                Casual
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                Combat
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                Multiplayer
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                Puzzle
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                Racing
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                RPG
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                Survival
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                Typing
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                Trivia
+              </div>
+            </div>
+          </div>
+
+        </div>
+  </section>
+  <!--this function to change overflow as the bootsrap cards tends to oveflow in small screen-->
+  <script type="text/javascript">
+    setInterval(function scroll() {
+      var width = window.innerWidth;
+      if (width < 1000) {
+        document.getElementById("Banner").style.overflowY = 'scroll';
+      }
+      else {
+        document.getElementById("Banner").style.overflowY = 'visible';
+      }
+    }, 1000)
+    scroll()
+  </script>
+
+
+
+  <!-- Game Section using boostrap cards-->
+  <section id="games-section">
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <div class="container-fluid">
+      <div class="row">
+
+
+        <div class="col col-lg-3 thumbnail" id="tennisgame">
+          <div class="card card-body">
+            <div class="hovereffect">
+              <div class="col-md-12 photo-1"></div>
+              <a href="#mybox" data-toggle="modal" data-slide-to="0">
+                <div class="overlay">
+                  <h2>ping pong Game</h2>
+                  <p>Sport</p>
+                </div>
+              </a>
+            </div>
+            <h1> ping pong <br>
+              <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input
+                  type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating"
+                  value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label
+                  for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> </div>
+            </h1>
+            <a href="07-Ping-Pong-Game/index.html" target="_blank"
+              class="highlight-button btn border-danger btn-medium button xs-margin-bottom-five" data-abc="true"><i
+                class="fa fa-play"></i><b>Play</b> </a> <br>
+          </div>
+        </div>
+
+
+
+        <div class="col col-lg-3 thumbnail" id="quizgame">
+          <div class="card card-body">
+            <div class="hovereffect">
+              <div class="col-md-12 photo-2"></div>
+              <a href="#mybox" data-toggle="modal" data-slide-to="1">
+                <div class="overlay">
+                  <h2>Falppy bird game</h2>
+                  <p>Casual</p>
+                </div>
+              </a>
+            </div>
+            <h1>Falppy Bird Game<br>
+              <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input
+                  type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating"
+                  value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label
+                  for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> </div>
+            </h1>
+            <a href="19-Flappy-Bird-Game/index.html" target="_blank"
+              class="highlight-button btn border-danger btn-medium button xs-margin-bottom-five" data-abc="true"><i
+                class="fa fa-play"></i><b>Play</b></a>
+          </div>
+        </div>
+
+
+        <div class="col col-lg-3 thumbnail" id="snakegame">
+          <div class="card card-body">
+            <div class="hovereffect">
+              <div class="col-md-12 photo-4"></div>
+              <a href="#mybox" data-toggle="modal" data-slide-to="3">
+                <div class="overlay">
+                  <h2>Snake Game</h2>
+                  <p>Arcade</p>
+                </div>
+              </a>
+            </div>
+            <h1> Snake Game <br>
+              <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input
+                  type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating"
+                  value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label
+                  for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> </div>
+            </h1>
+            <a href="14-Snake-Game/index.html" target="_blank"
+              class="highlight-button btn border-danger btn-medium button xs-margin-bottom-five" data-abc="true"><i
+                class="fa fa-play"></i><b> Play </b></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col col-lg-3 thumbnail" id="tetrisgame">
+          <div class="card card-body">
+            <div class="hovereffect">
+              <div class="col-md-12 photo-3"></div>
+              <a href="#mybox" data-toggle="modal" data-slide-to="2">
+                <div class="overlay">
+                  <h2>Breakout Game</h2>
+                  <p>Arcade</p>
+                </div>
+              </a>
+            </div>
+            <h1>Breakout Game <br>
+              <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input
+                  type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating"
+                  value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label
+                  for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> </div>
+            </h1>
+            <a href="04-Breakout-Game/index.html" target="_blank"
+              class="highlight-button btn border-danger btn-medium button xs-margin-bottom-five" data-abc="true"><i
+                class="fa fa-play"></i><b>Play</b></a>
+          </div>
+        </div>
+
+
+        <div class="col col-lg-3 thumbnail" id="ludogame">
+          <div class="card card-body">
+            <div class="hovereffect">
+              <div class="col-md-12 photo-5"></div>
+              <a href="#mybox" data-toggle="modal" data-slide-to="3">
+                <div class="overlay">
+                  <h2>Cross Road Game</h2>
+                  <p>Causal</p>
+                </div>
+              </a>
+            </div>
+            <h1> Cross Road Game <br>
+              <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input
+                  type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating"
+                  value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label
+                  for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> </div>
+            </h1>
+            <a href="20-Crossy-Road-Game/index.html" target="_blank"
+              class="highlight-button btn border-danger btn-medium button xs-margin-bottom-five" data-abc="true"><i
+                class="fa fa-play"></i><b> Play </b></a>
+          </div>
+        </div>
+
+
+        <div class="col col-lg-3 thumbnail" id="2048">
+          <div class="card card-body">
+            <div class="hovereffect">
+              <div class="col-md-12 photo-6"></div>
+              <a href="#mybox" data-toggle="modal" data-slide-to="3">
+                <div class="overlay">
+                  <h2>2048 Game</h2>
+                  <p>Arcade</p>
+                </div>
+              </a>
+            </div>
+            <h1> 2048 Game <br>
+              <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input
+                  type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating"
+                  value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label
+                  for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> </div>
+            </h1>
+            <a href="21-2048-Game/index.html" target="_blank"
+              class="highlight-button btn border-danger btn-medium button xs-margin-bottom-five" data-abc="true"><i
+                class="fa fa-play"></i><b> Play </b></a>
+          </div>
+        </div>
+
+
+        <div class="col col-lg-3 thumbnail">
+          <div class="card card-body">
+            <div class="hovereffect">
+              <a href="#mybox" data-toggle="modal" data-slide-to="3">
+              </a>
+            </div>
+            <div class="justify-content-center">
+              <h1> To Enjoy more games </h1>
+              <a href="login.html" target="_blank"
+                class="highlight-button btn border-danger btn-medium button xs-margin-bottom-five" data-abc="true"><i
+                  class="fa fa-user"></i><b> Login Now! </b></a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+  <!-- Footer Section -->
+  <footer class="footer text-center">
+    <div class="container">
+      <ul class="list-inline social-links">
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white" href="javascript:void(0)">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white" href="javascript:void(0)">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white" href="javascript:void(0)">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="text-muted small mb-0">Copyright © GameStore 2025 | My Project</p>
+    </div>
+  </footer> 
+  
+
+</body>
+
+</html>

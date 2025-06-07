@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: url('https://i.ibb.co/YbZbdmH/bg-pattern.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  flex-direction: column;
+  background: #293447e0;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  position: relative;
+}
+
+.game-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  color: #fff;
+  background: #1e2533;
+}
+
+.play-board {
+  flex-grow: 1;
+  display: grid;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+  background: #212837;
+}
+
+.play-board .food {
+  background: url('https://i.ibb.co/TY3smP1/apple.png') no-repeat center;
+  background-size: cover;
+}
+
+.play-board .head {
+  background: url('https://i.ibb.co/M8N9Q5W/snakehead.png') no-repeat center;
+  background-size: cover;
+}
+
+.controls {
+  display: none;
+  justify-content: space-between;
+  background: #1e2533;
+}
+
+.controls i {
+  flex: 1;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #B8C6DC;
+  border-right: 1px solid #293447;
+  cursor: pointer;
+}
+
+.controls i:last-child {
+  border-right: none;
+}
+
+.back-btn {
+  background: #ff5c5c;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 10px auto;
+  width: 90%;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #e04a4a;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal-content button {
+  background: #007bff;
+  border: none;
+  color: #fff;
+  padding: 10px 16px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background: #0056b3;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+  .controls {
+    display: flex;
+  }
+  .controls i {
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
